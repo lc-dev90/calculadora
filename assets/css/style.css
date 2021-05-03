@@ -16,12 +16,66 @@ body {
   font-family: "Open sans", sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 640px;
-  margin: 50px auto;
+  display: grid;
+  max-width: 500px;
+  width: 100%;
   background: #fff;
   padding: 20px;
   border-radius: 10px;
+}
+
+.container h1 {
+  color: rgb(61, 60, 60);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  background-color: #d6edff;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  padding: 15px;
+  font-size: 30px;
+  color: rgb(54, 54, 54);
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.grid-item:hover:not(.item-1) {
+  background-color: rgba(214, 212, 212, 0.8);
+}
+
+.grid-item:active:not(.item-1) {
+  transform: translateY(5px);
+}
+
+.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  padding: 0;
+}
+
+.input-data {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 3.4rem;
+  border-color: transparent;
 }
